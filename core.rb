@@ -5,16 +5,16 @@
 require 'async'
 require 'redis'
 
-redis = Redis.new(host: "localhost")
-redis.set("a", 1)
-# "OK"
-redis.get("a")
+redis = Redis.new(host: "localhost", port: 6379, db: 11)
+redis.set("mykey", "hello world")
+redis.get("mykey")
 # Maintain DB as knowledge "web"?
 # What is the root? Give the web a single "truth" of confidence 100%?
 # Path to nodes decided by membership, reorganize optimally (BGP protocol?)
 
 
 # func() Is Word?
+# subfunc() What Language?
 
 # func() Estimate Accuracy
 # .. Significant Figures go here
