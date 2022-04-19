@@ -10,8 +10,10 @@ redis.set("mykey", "hello world")
 redis.get("mykey")
 # Maintain DB as knowledge "web"?
 # What is the root? Give the web a single "truth" of confidence 100%?
-# Path to nodes decided by membership, reorganize optimally (BGP protocol?)
-
+# Path to nodes decided by membership, reorganize optimally (via membership)
+# Routing to all nodes should be possible with a series of questions (group membership functions)
+# How to decide when to stop branching??
+# Abstract vs. Concrete(Discrete vs. Analog)
 
 # func() Is Word?
 # subfunc() What Language?
