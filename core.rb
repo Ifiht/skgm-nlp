@@ -32,7 +32,7 @@ redis.get("mykey")
 -- Confidence Factor
     - notionally 99.7% for system, 95.0% for creator, 67.0% for all others (until adjusted)
 
-:Object
+:Object *get ability to lock object pieces, to avoid machine "evolving" into unsafe concepts
 -- ID (IPv6 address?)
     - 340,282,366,920,938,463,463,374,607,431,768,211,456 addresses, compare to ~750,000 words in English
     - 6,909 languages spoken today,        ~5,181,750,000 words used by humans
