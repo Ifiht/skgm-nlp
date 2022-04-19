@@ -16,9 +16,10 @@ require "async"
 -- Value
 -- Source
 -- Confidence Factor
+    - notionally 99.7% for system, 95.0% for creator, 67% for all others (until adjusted)
 
 :Object
--- ID
+-- ID (IPv6 address?)
 -- Timestamp
 -- Names
 -- Relations
