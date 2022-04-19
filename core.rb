@@ -5,8 +5,10 @@
 require 'async'
 require 'redis'
 
+number = 11
+obj = Marshal.dump(number)
 redis = Redis.new(host: "localhost", port: 6379, db: 11)
-redis.set("mykey", "hello world")
+redis.set("mykey", obj)
 redis.get("mykey")
 # Maintain DB as knowledge "web"?
 # What is the root? Give the web a single "truth" of confidence 100%?
