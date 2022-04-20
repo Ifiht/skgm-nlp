@@ -5,6 +5,20 @@
 require 'async'
 require 'redis'
 
+class sk_Entry
+    def initialize(v = nil, s = nil, c = 0.0)
+        @value = v
+        @source = s
+        @confidence = c
+    end
+end
+
+class sk_Timestamp < sk_Entry
+end
+
+class sk_Object
+end
+
 number = 11
 obj = Marshal.dump(number)
 redis = Redis.new(host: "localhost", port: 6379, db: 11)
