@@ -4,6 +4,7 @@
 # Ruby Async (vice threads): https://brunosutic.com/blog/async-ruby?msclkid=14618aa1bffe11ecb527a183ad865646
 require 'async'
 require 'redis'
+require 'bigdecimal'
 
 class sk_Entry
     def initialize(v = nil, s = nil, c = 0.0)
@@ -16,8 +17,14 @@ end
 class sk_Timestamp < sk_Entry
 end
 
+class sk_Name < sk_Entry
+end
+
 class sk_Object
 end
+
+# Fix 0.1 binary operation errors:
+(BigDecimal.new("1.2") - BigDecimal("1.0")) == BigDecimal("0.2")
 
 number = 11
 obj = Marshal.dump(number)
@@ -55,8 +62,8 @@ redis.get("mykey")
 -- Names
 -- Object_Members
     - not an array, inclusion is formulaic
--- Object_Membership
-    - not an array, inclusion is formulaic
+-X- Object_Membership
+    - this is not required, all membership decided by formula in group object
 -- Object_Relations
 -- Actions?
 
